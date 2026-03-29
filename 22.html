@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Prestige Drive</title>
+    <link rel="stylesheet" href="car.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Prestige Drive</div>
+        <nav>
+            <a href="#accueil">accueil</a>
+            <a href="collection.html">Collection</a>
+            <a href="about-us.html">about-us</a>
+            <a href="contact.html">contact</a>
+        </nav>
+        <div id="userArea"></div>
+    </header>
+
+    <section class="hero" >
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Conduisez l’exception</h1>
+            <p>Découvrez une expérience de location haut de gamme, pensée pour le confort, l’élégance et la performance.</p>
+            <a href="#reservation" class="btn">Réserver maintenant</a>
+            <a href="#testimonials" class="btn">voir plus d'Avis</a>
+        </div>
+    </section>
+
+    <section class="features">
+  <h2>Pourquoi choisir Prestige Drive ?</h2>
+
+  <div class="features-container">
+    <div class="feature">
+      <h3>🚗 Véhicules Premium</h3>
+      <p>Des voitures de luxe récentes et bien entretenues.</p>
+    </div>
+
+    <div class="feature">
+      <h3>⚡ Réservation rapide</h3>
+      <p>Réservez en quelques clics sans complications.</p>
+    </div>
+
+    <div class="feature">
+      <h3>💰 Meilleurs prix</h3>
+      <p>Des tarifs compétitifs adaptés à tous.</p>
+    </div>
+
+    <div class="feature">
+      <h3>📞 Support 24/7</h3>
+      <p>Nous sommes disponibles à tout moment pour vous.</p>
+    </div>
+  </div>
+</section>
+ 
+<section class="stats">
+  <div class="stat">
+   <img src="xx.png" alt="nos clients">
+     <h2>+500</h2>
+    <p>Clients satisfaits</p>
+  </div>
+
+  <div class="stat">
+    <img src="ss.png" alt="nos voitures">
+    <h2>+120</h2>
+    <p>Voitures disponibles</p>
+  </div>
+
+  <div class="stat">
+    <img src="55.png" alt="notre expérience">
+    <h2>+5 ans</h2>
+    <p>D'expérience</p>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials" >
+  <h2>Avis de nos clients</h2>
+
+  <div class="testimonial">
+    <p>"Service bien et voiture propre "</p>
+    <h4>- Yassine</h4>
+  </div>
+
+  <div class="testimonial">
+    <p>"Meilleure expérience de location au Maroc."</p>
+    <h4>- Sara</h4>
+  </div>
+
+   <div class="testimonial">
+    <p>"livraison rapide"</p>
+    <h4>- aya</h4>
+  </div>
+</section>
+
+
+
+<section class="reservation" id="reservation">
+  <h2>Réserver votre voiture</h2>
+
+  <form id="reservation-form">
+    <input type="text" id="fullName" placeholder="Nom complet" required>
+    <input type="email" id="email" placeholder="Adresse email" required>
+
+    <select id="carSelect" required>
+      <option value="">Choisir une voiture</option>
+      <option value="Mercedes Classe S" data-price="1200">Mercedes Classe S - 1200 DH/jour</option>
+      <option value="BMW Série 7" data-price="1100">BMW Série 7 - 1100 DH/jour</option>
+      <option value="Range Rover" data-price="1700">Range Rover - 1700 DH/jour</option>
+      <option value="Audi Q8" data-price="1700">Audi Q8 - 1700 DH/jour</option>
+      <option value="Porsche Cayenne" data-price="1700">Porsche Cayenne - 1700 DH/jour</option>
+      <option value="Ferrari" data-price="1300">Ferrari - 1300 DH/jour</option>
+    </select>
+
+    <label>Date de départ</label>
+    <input type="date" id="startDate" required>
+
+    <label>Date de retour</label>
+    <input type="date" id="endDate" required>
+
+    <input type="text" id="pickupLocation" placeholder="Lieu de récupération" required>
+    <input type="text" id="returnLocation" placeholder="Lieu de retour" required>
+
+    <label>
+      <input type="checkbox" id="driverOption">
+      Ajouter chauffeur privé (+500 DH)
+    </label>
+
+    <label>
+      <input type="checkbox" id="insuranceOption">
+      Assurance premium (+200 DH)
+    </label>
+
+    <div id="reservation-summary">
+      <p>Prix par jour : <span id="dailyPrice">0</span> DH</p>
+      <p>Nombre de jours : <span id="totalDays">0</span></p>
+      <p>Options : <span id="optionsPrice">0</span> DH</p>
+      <p><strong>Montant total : <span id="totalPrice">0</span> DH</strong></p>
+    </div>
+
+    <button type="submit">Confirmer la réservation</button>
+  </form>
+
+  <div id="successMessage"></div>
+</section>
+
+    <footer >
+        <p>Prestige Drive 2026 - Tous droits réservés</p>
+        <p>Email : contact@prestigedrive.com | Tél : +212 6 62 82 87 90</p>
+    </footer>
+   
+
+<div id="authModal" class="auth-modal">
+  <div class="auth-box">
+    <div class="auth-top">
+      <h2 id="authTitle">Connexion</h2>
+      <p class="auth-subtitle">Accédez à votre espace Prestige Drive</p>
+    </div>
+
+    <input type="text" id="authName" placeholder="Nom complet" style="display: none;">
+    <input type="email" id="authEmail" placeholder="Adresse email">
+    <input type="password" id="authPassword" placeholder="Mot de passe">
+
+    <button id="authSubmitBtn" type="button">Se connecter</button>
+
+    <p id="authError" class="auth-error"></p>
+
+    <p id="authToggleText" class="auth-toggle-text">
+      Vous n’avez pas de compte ?
+      <span id="toggleAuthMode">Créer un compte</span>
+    </p>
+  </div>
+</div>
+
+
+    <script src="prestige-drive.js"></script>
+
+    <script src="animations.js"></script>
+
+</body>
+</html>

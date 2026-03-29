@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Détails voiture</title>
+  <link rel="stylesheet" href="car.css">
+  <style>
+
+    body {
+  padding-top: 80px;
+}
+
+      .car-details-section {
+  padding: 30px 80px !important;
+}
+
+.similar-section {
+  padding: 20px 80px !important;
+}
+
+.similar-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+    
+
+
+
+
+    .car-details-section {
+      display: flex;
+      gap: 40px;
+      padding: 60px 80px;
+      align-items: flex-start;
+      background: #111;
+    }
+    .car-details-section img {
+      width: 500px;
+      border-radius: 12px;
+      border: 2px solid #c9a84c;
+    }
+    .car-details-info {
+      color: white;
+      flex: 1;
+    }
+    .car-details-info h1 {
+      font-size: 2.5rem;
+      color: #c9a84c;
+      margin-bottom: 20px;
+    }
+    .car-details-info p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      color: #ccc;
+    }
+    .car-details-info p span {
+      color: white;
+      font-weight: bold;
+    }
+    .btn-reserve {
+      margin-top: 60px;
+      padding: 14px 35px;
+      background: transparent;
+      border: 2px solid #c9a84c;
+      color: #c9a84c;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .btn-reserve:hover {
+      background: #c9a84c;
+      color: #000;
+    }
+
+
+
+    /* VOITURES SIMILAIRES */
+    .similar-section {
+      padding: 50px 80px;
+      background: #0d0d0d;
+    }
+    .similar-section h2 {
+      color: #c9a84c;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+    .similar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .similar-card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s;
+      cursor: pointer;
+    }
+    .similar-card:hover {
+      transform: translateY(-6px);
+      border-color: #c9a84c;
+    }
+    .similar-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .similar-card-info {
+      padding: 15px;
+      color: white;
+    }
+    .similar-card-info h3 { color: #c9a84c; margin-bottom: 8px; }
+    .similar-card-info p { color: #aaa; font-size: 0.9rem; margin: 4px 0; }
+    .no-similar { color: #aaa; font-size: 1rem; }
+
+    /* BADGE SPECS */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .spec-badge {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 12px 16px;
+    }
+    .spec-badge .label {
+      font-size: 0.75rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .spec-badge .value {
+      font-size: 1.1rem;
+      color: white;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Prestige Drive</div>
+  <nav>
+    <a href="22.html">Accueil</a>
+    <a href="collection.html">Collection</a>
+    <a href="about-us.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- DÉTAILS VOITURE -->
+<section class="car-details-section" id="detailsSection">
+  <img id="carImage" src="" alt="">
+  <div class="car-details-info">
+    <h1 id="carName"></h1>
+    <div class="specs-grid">
+      <div class="spec-badge">
+        <div class="label">Prix / jour</div>
+        <div class="value" id="carPrice"></div>
+      </div>
+      <div class="spec-badge">
+        <div class="label">Vitesse max</div>
+        <div class="value" id="carSpeed"></div>
+      </div>
+      <div class="spec-badge">
+        <div class="label">Marque</div>
+        <div class="value" id="carBrand"></div>
+      </div>
+      <div class="spec-badge">
+        <div class="label">Disponibilité</div>
+        <div class="value" style="color:#4caf50;">Disponible ✓</div>
+      </div>
+    </div> <br> <br>
+    <a href="22.html#reservation" class="btn-reserve">Réserver cette voiture</a>
+  </div>
+</section>
+
+ 
+
+<!-- VOITURES SIMILAIRES -->
+<section class="similar-section">
+  <h2>Voitures similaires</h2>
+  <div class="similar-grid" id="similarGrid"></div>
+</section>
+
+<script src="details.js"></script>
+</body>
+</html>
